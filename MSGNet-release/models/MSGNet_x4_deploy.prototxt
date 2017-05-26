@@ -1,0 +1,282 @@
+name: "MSGNet_x4"
+
+input: "data-Y"
+input_dim: 1
+input_dim: 1
+input_dim: 63
+input_dim: 63
+
+input: "data-D"
+input_dim: 1
+input_dim: 1
+input_dim: 16
+input_dim: 16
+
+layer {
+  name: "conv1-Y"
+  type: "Convolution"
+  bottom: "data-Y"
+  top: "conv1-Y"
+  convolution_param {
+    num_output: 49
+    kernel_size: 7
+    stride: 1
+    pad: 3
+  }
+}
+
+layer {
+  name: "prelu1-Y"
+  type: "PReLU"
+  bottom: "conv1-Y"
+  top: "conv1-Y"
+}
+
+layer {
+  name: "conv2-Y"
+  type: "Convolution"
+  bottom: "conv1-Y"
+  top: "conv2-Y"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu2-Y"
+  type: "PReLU"
+  bottom: "conv2-Y"
+  top: "conv2-Y"
+}
+
+layer {
+  name: "conv3-Y"
+  type: "Convolution"
+  bottom: "conv2-Y"
+  top: "conv3-Y"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu3-Y"
+  type: "PReLU"
+  bottom: "conv3-Y"
+  top: "conv3-Y"
+}
+
+layer {
+  name: "pool3-Y"
+  type: "Pooling"
+  bottom: "conv3-Y"
+  top: "pool3-Y"
+  pooling_param {
+    pool: MAX
+    kernel_size: 3
+    stride: 2     
+    pad: 0
+  }
+}
+
+layer {
+  name: "conv1-D"
+  type: "Convolution"
+  bottom: "data-D"
+  top: "conv1-D"
+  convolution_param {
+    num_output: 64
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu1-D"
+  type: "PReLU"
+  bottom: "conv1-D"
+  top: "conv1-D"
+}
+
+layer {
+  name: "deconv2-D"
+  type: "Deconvolution"
+  bottom: "conv1-D"
+  top: "deconv2-D"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 2
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu2-D"
+  type: "PReLU"
+  bottom: "deconv2-D"
+  top: "deconv2-D"
+}
+
+layer {
+  name: "concat2-x4"
+  bottom: "pool3-Y"
+  bottom: "deconv2-D"
+  top: "concat2-x4"
+  type: "Concat"
+  concat_param {
+    axis: 1
+  }
+}
+
+layer {
+  name: "conv2a-x4"
+  type: "Convolution"
+  bottom: "concat2-x4"
+  top: "conv2a-x4"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu2a-x4"
+  type: "PReLU"
+  bottom: "conv2a-x4"
+  top: "conv2a-x4"
+}
+
+layer {
+  name: "conv2b-x4"
+  type: "Convolution"
+  bottom: "conv2a-x4"
+  top: "conv2b-x4"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu2b-x4"
+  type: "PReLU"
+  bottom: "conv2b-x4"
+  top: "conv2b-x4"
+}
+
+layer {
+  name: "deconv3-x4"
+  type: "Deconvolution"
+  bottom: "conv2b-x4"
+  top: "deconv3-x4"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 2
+    pad: 1
+  }
+}
+
+layer {
+  name: "prelu3-x4"
+  type: "PReLU"
+  bottom: "deconv3-x4"
+  top: "deconv3-x4"
+}
+
+layer {
+  name: "concat3-x4"
+  bottom: "conv2-Y"
+  bottom: "deconv3-x4"
+  top: "concat3-x4"
+  type: "Concat"
+  concat_param {
+    axis: 1
+  }
+}
+
+layer {
+  name: "conv3a"
+  type: "Convolution"
+  bottom: "concat3-x4"
+  top: "conv3a"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu3a"
+  type: "PReLU"
+  bottom: "conv3a"
+  top: "conv3a"
+}
+
+layer {
+  name: "conv3b"
+  type: "Convolution"
+  bottom: "conv3a"
+  top: "conv3b"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu3b"
+  type: "PReLU"
+  bottom: "conv3b"
+  top: "conv3b"
+}
+
+layer {
+  name: "conv3c"
+  type: "Convolution"
+  bottom: "conv3b"
+  top: "conv3c"
+  convolution_param {
+    num_output: 32
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
+layer {
+  name: "prelu3c"
+  type: "PReLU"
+  bottom: "conv3c"
+  top: "conv3c"
+}
+
+layer {
+  name: "conv4"
+  type: "Convolution"
+  bottom: "conv3c"
+  top: "conv4"
+  convolution_param {
+    num_output: 1
+    kernel_size: 5
+    stride: 1
+    pad: 2
+  }
+}
+
