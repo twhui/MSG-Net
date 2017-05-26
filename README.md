@@ -1,6 +1,6 @@
 # Caffe for MSG-Net
 This is the release of Depth Map Super-Resolution by Deep Multi-Scale Guidance (MSG-Net) in ECCV16. 
-It comes with 4 trained networks (x2, x4, x8, x16) and the 3 testing sets (A, B, C).
+It comes with 4 trained networks (x2, x4, x8, x16) and 3 testing sets (A, B, C).
 
 http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html
 
