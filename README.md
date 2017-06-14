@@ -12,7 +12,7 @@ You need to install <a href="https://github.com/BVLC/caffe">caffe</a> and remebe
 # Training data
 It consists 58 RGBD images from MPI Sintel depth dataset, and 34 RGBD images (6, 10 and 18 images are from 2001, 2006 and 2014 datasets respectively) from Middlebury dataset. 82 images were used for training and 10 images.
 
-If you want to use our training set for training your model, the RGB and depth images are available in <code>MSGNet-release/training_data/RGB.mat</code> and <code>MSGNet-release/training_data/Df.mat</code> respectively. RGBD frames: 1, 20, 28, 58, 64, 66, 69, 73, 75, 79 are used for validation.
+If you want to use our training set for training your model, the RGB and depth images are available in <code>training_data/RGB.mat</code> and <code>training_data/Df.mat</code> respectively. RGBD frames: 1, 20, 28, 58, 64, 66, 69, 73, 75, 79 are used for validation.
 
 # License and Citation
 All code is provided for research purposes only and without any warranty. Any commercial use requires our consent. When using the code and/or training data in your research work, please cite the following paper:
