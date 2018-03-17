@@ -1,10 +1,12 @@
 # Caffe for MSG-Net (Multi-scale guidance network)
 This is the release of MSG-Net for the paper Depth Map Super-Resolution by Deep Multi-Scale Guidance in ECCV16. It comes with 4 trained networks (x2, x4, x8, x16) and 3 testing sets (A, B, C).
 
+To the best of our knowledge, MSG-Net is the FIRST paper which uses convolution neural network (CNN) for upsampling depth images with the multi-scale guidance from the corresponding high-resolution RGB images.
+
 For more details, please visit the <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">project page </a>.
 
 # Dependency
-The codes are based on <a href="https://github.com/BVLC/caffe">caffe</a> and Matlab.
+We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
 
 # Installation and Running
 You need to install <a href="https://github.com/BVLC/caffe">caffe</a> and remeber to complie matcaffe. You can put the folder <code>MSGNet-release</code> in <code>caffe/examples</code>. Finally, you need to get into the the directory of <code>examples/MSGNet-release</code>, and run <code>MSGNet.m</code>. </li>
