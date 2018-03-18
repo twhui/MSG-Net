@@ -4,7 +4,7 @@ This repository is the release of <strong>MSG-Net</strong> for our paper <a href
 
 To the best of our knowledge, MSG-Net is the <strong>FIRST convolution neural network</strong> which attempts to <strong>1) upsamples depth images</strong> and <strong>2) uses the multi-scale guidance from the corresponding high-resolution RGB images</strong>.
 
-Another <a href="https://github.com/twhui/MS-Nethttps://github.com/twhui/MS-Net">repository </a> for <strong>MS-Net</strong> (without multi-scale guidance) is also available.
+Another <a href="https://github.com/twhui/MS-Net">repository </a> for <strong>MS-Net</strong> (without multi-scale guidance) is also available.
 
 For more details, please visit the <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">project page </a>.
 
