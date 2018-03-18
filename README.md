@@ -1,7 +1,8 @@
 # Caffe for MSG-Net (Multi-scale guidance network)
-This is the release of MSG-Net for the paper Depth Map Super-Resolution by Deep Multi-Scale Guidance in ECCV16. It comes with 4 trained networks (x2, x4, x8, x16) and 3 testing sets (A, B, C).
 
-To the best of our knowledge, MSG-Net is the FIRST paper which uses convolution neural network (CNN) for upsampling depth images with the multi-scale guidance from the corresponding high-resolution RGB images.
+This repository is the release of <strong>MSG-Net</strong> for our paper <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_depth.pdf"><strong>Depth Map Super-Resolution by Deep Multi-Scale Guidance </strong></a> in ECCV16. It comes with 4 trained networks (x2, x4, x8, and x16) and 3 hole-filled testing sets (A, B, and C).
+
+To the best of our knowledge, MSG-Net is the <strong>first convolution neural network (CNN)</strong> which attempts to <strong>1) upsamples depth images</strong> and <strong>2) uses the multi-scale guidance from the corresponding high-resolution RGB images</strong>.
 
 For more details, please visit the <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">project page </a>.
 
