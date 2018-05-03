@@ -14,7 +14,7 @@ For more details, please visit the <a href="http://mmlab.ie.cuhk.edu.hk/projects
 We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
 
 # Installation and Running
-You need to install <a href="https://github.com/BVLC/caffe">caffe</a> and remeber to complie matcaffe. You can put the folder <code>MSGNet-release</code> in <code>caffe/examples</code>. Finally, you need to get into the the directory of <code>examples/MSGNet-release</code>, and run <code>MSGNet.m</code>. </li>
+You need to install <a href="https://github.com/BVLC/caffe">caffe</a> and remeber to complie matcaffe. You can put the folder <code>MSGNet-release</code> in <code>caffe/examples</code>. Finally, you need to get into the the directory of <code>examples/MSGNet-release/util</code>, and run <code>MSGNet.m</code>. </li>
 
 # Training data
 Our <a href="https://www.dropbox.com/sh/p45abqvpzv66m2p/AACwDh0iIu67Us3IPLusfPXXa?dl=0e">RGBD training set</a> consists of 58 RGBD images from <a href="http://sintel.is.tue.mpg.de/depth">MPI Sintel depth dataset</a>, and 34 RGBD images from <a href="http://vision.middlebury.edu/stereo/data/">Middlebury dataset</a>. 82 images are used for training and 10 images (frames 1, 20, 28, 58, 64, 66, 69, 73, 75 and 79) are used for validation.
