@@ -1,4 +1,4 @@
-# MSG-Net
+# MSG-Net (Multi-scale guidance network)
 </p>
 <p align="center"><img src="https://github.com/twhui/MSG-Net/blob/master/MSGNet-release/misc/MSG_Net.png" align="center" {:height="70%" width="80%"}></p>
 <p align="center">Multi-scale guidance network</p>
@@ -29,7 +29,7 @@ Testig set is available at the folder <code>MSGNet-release/testing sets</code>.
 # License and Citation
 All code is provided for research purposes only and without any warranty. Any commercial use requires our consent. If our work helps your research or you use the code in your research, please cite the following paper:
 
-<pre><code>@InProceedings{hui2016,  
+<pre><code>@InProceedings{hui16msgnet,  
   author = {Tak-Wai Hui and Chen Change Loy and and Xiaoou Tang},  
   title  = {Depth Map Super-Resolution by Deep Multi-Scale Guidance},  
   booktitle  = {Proceedings of European Conference on Computer Vision (ECCV)},  
