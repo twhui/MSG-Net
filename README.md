@@ -28,7 +28,7 @@ All code is provided for research purposes only and without any warranty. Any co
 <pre><code>@InProceedings{hui2016,  
   author = {Tak-Wai Hui and Chen Change Loy and and Xiaoou Tang},  
   title  = {Depth Map Super-Resolution by Deep Multi-Scale Guidance},  
-  booktitle  = {European Conference on Computer Vision (ECCV)},  
+  booktitle  = {Proceedings of European Conference on Computer Vision (ECCV)},  
   pages = {353--369},
   year = {2016},  
   url = {http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html}
