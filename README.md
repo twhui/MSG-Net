@@ -12,7 +12,7 @@ To the best of our knowledge, <strong>MSG-Net</strong> is the <strong>FIRST conv
 
 Another <a href="https://github.com/twhui/MS-Net">repository </a> for <strong>MS-Net</strong> (without multi-scale guidance) is also available.
 
-For more details, please visit the <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">project page </a>.
+For more details, please visit <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">my project page </a>.
 
 # Dependency
 We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
