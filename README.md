@@ -8,11 +8,11 @@
 
 This repository is the release of <strong>MSG-Net</strong> for our paper <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_depth.pdf"><strong>Depth Map Super-Resolution by Deep Multi-Scale Guidance </strong></a> in ECCV16. It comes with four trained networks (x2, x4, x8, and x16), one hole-filled RGBD training set, and three hole-filled RGBD testing sets (A, B, and C).
 
-To the best of our knowledge, <strong>MSG-Net</strong> is the <strong>FIRST convolution neural network</strong> which attempts to <i> upsample depth images under multi-scale guidance from the corresponding high-resolution RGB images</i>.
+<strong>To the best of our knowledge, MSG-Net is the FIRST convolution neural networkwhich attempts to <i> upsample depth images under multi-scale guidance from the corresponding high-resolution RGB images</i></strong>.
 
-Another <a href="https://github.com/twhui/MS-Net">repository </a> for <strong>MS-Net</strong> (without multi-scale guidance) is also available.
+Another <a href="https://github.com/twhui/MS-Net"><strong>repository</strong> </a> for <strong>MS-Net</strong> (without multi-scale guidance) is also available.
 
-For more details, please visit <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html">my project page </a>.
+For more details, please visit <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html"><strong>my project page</strong></a>.
 
 # Dependency
 We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
