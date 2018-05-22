@@ -15,7 +15,7 @@ Another <a href="https://github.com/twhui/MS-Net"><strong>repository</strong> </
 For more details, please visit <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html"><strong>my project page</strong></a>.
 
 # License and Citation
-All code is provided for research purposes only and without any warranty. Any commercial use requires our consent. When using any parts of the code package or the paper (<i>Depth Map Super-Resolution by Deep Multi-Scale Guidance</i>) in your work, please cite the following paper:
+All code and other materials (including but not limited to the paper, figures, and tables) are provided for research purposes only and without any warranty. Any commercial use requires our consent. When using any parts of the code package or the paper (<i>Depth Map Super-Resolution by Deep Multi-Scale Guidance</i>) in your work, please cite the following paper:
 
 <pre><code>@InProceedings{hui16msgnet,    
  author = {Tak-Wai Hui and Chen Change Loy and and Xiaoou Tang},    
