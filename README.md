@@ -6,7 +6,7 @@
 </p>
 <p align="center"><img src="https://github.com/twhui/MSG-Net/blob/master/MSGNet-release/misc/illus.png" align="center" {:height="60%" width="70%"}></p>
 
-This repository is the release of <strong>MSG-Net</strong> for our paper <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_depth.pdf"><strong>Depth Map Super-Resolution by Deep Multi-Scale Guidance </strong></a> in ECCV16. It comes with four trained networks (x2, x4, x8, and x16), one hole-filled RGBD training set, and three hole-filled RGBD testing sets (A, B, and C).
+This repository (<strong>https://github.com/twhui/MSG-Net</strong>) is the offical release of <strong>MSG-Net</strong> for our paper <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_depth.pdf"><strong>Depth Map Super-Resolution by Deep Multi-Scale Guidance </strong></a> in ECCV16. It comes with four trained networks (x2, x4, x8, and x16), one hole-filled RGBD training set, and three hole-filled RGBD testing sets (A, B, and C).
 
 <strong>To the best of our knowledge, MSG-Net is the FIRST convolution neural networkwhich attempts to <i> upsample depth images under multi-scale guidance from the corresponding high-resolution RGB images</i></strong>.
 
