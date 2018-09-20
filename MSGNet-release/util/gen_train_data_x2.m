@@ -8,10 +8,8 @@ clc;
 
 %% Settings
 dataDir = '/path/to/training_data/';
-dataSet = 'Train_v3d';
 saveDir = '/path/to/h5/';
 
-grad_thd = 0.0005;
 chunksz = 128;
 
 scale = 2;
@@ -20,17 +18,9 @@ size_dataD = 20;
 size_label = 40;
 border_dataY = 1;
 border_label = 1;
-
 stride = 22;
-
 data_aug = true;
-
-%%
-if strcmp(dataSet, 'Train_v3d')
-    index_val = [1 20 28 58 64 66 69 73 75 79];
-else
-    error('Undefined training data set!\n');
-end
+index_val = [1 20 28 58 64 66 69 73 75 79];
 
 %% Initialization
 dataY = zeros(size_dataY, size_dataY, 1, 1);
@@ -45,14 +35,10 @@ assert(pad_dataY >= 0, 'pad_dataY cannot be an negative number!');
 assert(pad_label >= 0, 'pad_label cannot be an negative number!');
 
 count = 0;
-count_edge = 0;
-count_edge_pre = 0;
-count_flat = 0;
-count_flat_pre = 0;
 
 %% Generate training  data
-load([dataDir dataSet '/RGB']);
-load([dataDir dataSet '/Df']);
+load([dataDir '/RGB']);
+load([dataDir '/Df']);
 
 index_train = setdiff(1:numel(Df), index_val);
 fprintf('%d images is used for training.\n', numel(index_train));
@@ -86,14 +72,10 @@ for k = 1 : size(Df,1)
 
     stride_ = stride;
 
-    if strcmp(dataSet, 'Train_v3d')
-        if index_train(k) >= 75
-            stride_ = floor(2.0*stride_);
-        elseif index_train(k) >= 65
-            stride_ = floor(1.5*stride_);
-        end
-    else
-        error('Undefinined dataSet!\n');
+    if index_train(k) >= 75
+        stride_ = floor(2.0*stride_);
+    elseif index_train(k) >= 65
+        stride_ = floor(1.5*stride_);
     end
 
     for x = 1 : stride_ : H-size_subIm+1
@@ -149,3 +131,36 @@ order = randperm(num_patches);
 dataY = dataY(:,:,:,order);
 dataD = dataD(:,:,:,order);
 label = label(:,:,:,order);
+
+%% writing to HDF5
+created_flag = false;
+totalct = 0;
+
+for batchno = 1 : floor(num_patches/chunksz)
+    last_read = (batchno - 1)*chunksz;
+    batchdata = dataY(:, :, :, last_read+1 : last_read+chunksz);
+
+    startloc = struct('dat', [1,1,1,totalct+1], 'lab', [1,1,1,totalct+1]);
+    curr_dat_sz = store2hdf5_v2(savepathY, '-Y', batchdata, [], [], ~created_flag, startloc, chunksz);
+    created_flag = true;
+    totalct = curr_dat_sz(end);
+end
+
+h5disp(savepathY);
+
+
+created_flag = false;
+totalct = 0;
+
+for batchno = 1 : floor(num_patches/chunksz)
+    last_read = (batchno - 1)*chunksz;
+    batchdata = dataD(:, :, :, last_read+1 : last_read+chunksz);
+    batchlabs = label(:, :, :, last_read+1 : last_read+chunksz);
+
+    startloc = struct('dat', [1,1,1,totalct+1], 'lab', [1,1,1,totalct+1]);
+    curr_dat_sz = store2hdf5_v2(savepathD, '-D', batchdata, [], batchlabs, ~created_flag, startloc, chunksz);
+    created_flag = true;
+    totalct = curr_dat_sz(end);
+end
+
+h5disp(savepathD);
