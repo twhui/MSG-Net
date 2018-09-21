@@ -34,5 +34,8 @@ You need to install <a href="https://github.com/BVLC/caffe">caffe</a> and remebe
 # Training data
 Our <a href="https://www.dropbox.com/sh/p45abqvpzv66m2p/AACwDh0iIu67Us3IPLusfPXXa?dl=0e">RGBD training set</a> consists of 58 RGBD images from <a href="http://sintel.is.tue.mpg.de/depth">MPI Sintel depth dataset</a>, and 34 RGBD images from <a href="http://vision.middlebury.edu/stereo/data/">Middlebury dataset</a>. 82 images are used for training and 10 images (frames 1, 20, 28, 58, 64, 66, 69, 73, 75 and 79) are used for validation.
 
+# Training sub-images/patches (hdf5 format)
+An example for generating training patches of the scale factor 2 can be found here <code>util/gen_train_data_x2.m</code>. 
+
 # Testing data
 Testig set is available at the folder <code>MSGNet-release/testing sets</code>.
