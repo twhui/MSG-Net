@@ -15,7 +15,7 @@ Another <a href="https://github.com/twhui/MS-Net"><strong>repository</strong> </
 For more details, please visit <a href="http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html"><strong>my project page</strong></a>.
 
 # License and Citation
-All code and other materials (including but not limited to the paper, figures, and tables) are provided for research purposes only and without any warranty. Any commercial use requires our consent. When using any parts of the code package or the paper (<i>Depth Map Super-Resolution by Deep Multi-Scale Guidance</i>) in your work, please cite the following paper:
+This software and associated documentation files (the "Software"), and the research paper (Depth Map Super-Resolution by Deep Multi-Scale Guidance) including but not limited to the figures, and tables (the "Paper") are provided for research purposes only and without any warranty. Any commercial use requires my consent. When using any parts of the Software or the Paper in your work, please cite the following paper
 
 <pre><code>@InProceedings{hui16msgnet,    
  author = {Tak-Wai Hui and Chen Change Loy and and Xiaoou Tang},    
@@ -23,7 +23,8 @@ All code and other materials (including but not limited to the paper, figures, a
  booktitle  = {Proceedings of European Conference on Computer Vision (ECCV)},    
  pages = {353--369},  
  year = {2016},    
- url = {http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html}}</code></pre>
+ url = {http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html}</code></pre>
+ }
 
 # Dependency
 We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
