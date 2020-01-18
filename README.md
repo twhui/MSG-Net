@@ -23,8 +23,8 @@ This software and associated documentation files (the "Software"), and the resea
  booktitle  = {Proceedings of European Conference on Computer Vision (ECCV)},    
  pages = {353--369},  
  year = {2016},    
- url = {http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html}</code></pre>
- }
+ url = {http://mmlab.ie.cuhk.edu.hk/projects/guidance_SR_depth.html}
+}</code></pre>
 
 # Dependency
 We train our models using <a href="https://github.com/BVLC/caffe">caffe</a> and evaluate the results on Matlab.
