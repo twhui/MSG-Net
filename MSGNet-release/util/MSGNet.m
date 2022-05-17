@@ -1,5 +1,10 @@
-% This code is only for non-commercial and scientific research purposes without any warranty.
-% When using this code, please cite "T.-W. Hui, C. C. Loy, X. Tang, Depth Map Super-Resolution by Deep Multi-Scale Guidance, pp.353 – 369, ECCV16"
+# MSG-Net (published in ECCV 2016)                                          
+# Copyright (c) 2016 Tak-Wai Hui.  All rights reserved. 
+#
+# This software is licensed under the terms of the MSG-Net licence
+# which allows for non-commercial use only unless a prior arrangement
+# has been made with the author (Tak-Wai Hui), the full terms of which 
+# are made available in the LICENSE file.
 
 clear all;
 close all;
